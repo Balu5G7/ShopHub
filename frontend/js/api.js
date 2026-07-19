@@ -1,29 +1,29 @@
 const API_BASE = 'http://localhost:3001/api';
 
-// Auth Token Management - All stored under ShopHub namespace
+// Auth Token Management - All stored under shophub namespace
 function getToken() {
-    return localStorage.getItem('ShopHub_token');
+    return localStorage.getItem('shophub_token');
 }
 
 function setToken(token) {
-    localStorage.setItem('ShopHub_token', token);
+    localStorage.setItem('shophub_token', token);
 }
 
 function removeToken() {
-    localStorage.removeItem('ShopHub_token');
+    localStorage.removeItem('shophub_token');
 }
 
 function getUser() {
-    const user = localStorage.getItem('ShopHub_user');
+    const user = localStorage.getItem('shophub_user');
     return user ? JSON.parse(user) : null;
 }
 
 function setUser(user) {
-    localStorage.setItem('ShopHub_user', JSON.stringify(user));
+    localStorage.setItem('shophub_user', JSON.stringify(user));
 }
 
 function removeUser() {
-    localStorage.removeItem('ShopHub_user');
+    localStorage.removeItem('shophub_user');
 }
 
 function isAuthenticated() {
